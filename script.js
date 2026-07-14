@@ -16,7 +16,7 @@ const MESSAGES = [
 ];
 
 const NAMES_HE = {
-  yagel: "יגאל",
+  yagel: "יגל",
   amiad: "עמיעד",
 };
 
