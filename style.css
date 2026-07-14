@@ -1,14 +1,15 @@
-/* Bold & colorful personal site for Yagel & Amiad Goldberg */
+/* Bold, boy-colors personal site for Yagel & Amiad Goldberg */
 
 :root {
-  --ink: #241238;
-  --muted: #5b4b73;
-  --bg: #fff2e0;
-  --pink: #ff5da2;
-  --orange: #ff8a3d;
-  --yellow: #ffd23f;
-  --purple: #7c3aed;
-  --teal: #16c9b0;
+  --ink: #0f2540;
+  --muted: #4b6382;
+  --bg: #eaf3ff;
+  --blue: #2563eb;
+  --navy: #1e3a8a;
+  --orange: #f97316;
+  --green: #16a34a;
+  --yellow: #facc15;
+  --teal: #0ea5b7;
 }
 
 * {
@@ -30,14 +31,14 @@ body {
   position: fixed;
   border-radius: 50%;
   filter: blur(10px);
-  opacity: 0.55;
+  opacity: 0.5;
   z-index: 0;
 }
 
 .blob-a {
   width: 420px;
   height: 420px;
-  background: var(--pink);
+  background: var(--blue);
   top: -140px;
   left: -140px;
 }
@@ -45,7 +46,7 @@ body {
 .blob-b {
   width: 360px;
   height: 360px;
-  background: var(--teal);
+  background: var(--green);
   bottom: -120px;
   right: -100px;
 }
@@ -61,7 +62,7 @@ body {
 .shell {
   position: relative;
   z-index: 1;
-  max-width: 880px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 10vh 24px 60px;
 }
@@ -78,7 +79,7 @@ body {
   font-size: 13px;
   font-weight: 800;
   color: #fff;
-  background: var(--purple);
+  background: var(--navy);
   padding: 8px 18px;
   border-radius: 999px;
   margin: 0 0 20px;
@@ -90,15 +91,15 @@ h1 {
   margin: 0 0 20px;
   padding-bottom: 0.08em;
   font-weight: 900;
-  background: linear-gradient(90deg, var(--pink), var(--orange) 45%, var(--purple));
+  background: linear-gradient(90deg, var(--blue), var(--teal) 45%, var(--green));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .amp {
-  color: var(--teal);
-  -webkit-text-fill-color: var(--teal);
+  color: var(--orange);
+  -webkit-text-fill-color: var(--orange);
 }
 
 .lead {
@@ -110,13 +111,13 @@ h1 {
 
 .hero-photo {
   display: block;
-  width: 220px;
-  height: 220px;
+  width: 340px;
+  height: 340px;
   object-fit: cover;
   border-radius: 50%;
   margin: 32px auto 0;
-  border: 6px solid #fff;
-  box-shadow: 0 14px 34px rgba(36, 18, 56, 0.2);
+  border: 8px solid #fff;
+  box-shadow: 0 18px 40px rgba(15, 37, 64, 0.25);
 }
 
 .cards {
@@ -131,7 +132,7 @@ h1 {
   border-radius: 20px;
   padding: 28px 24px;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(36, 18, 56, 0.12);
+  box-shadow: 0 12px 30px rgba(15, 37, 64, 0.1);
   border: 3px solid transparent;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
@@ -141,7 +142,7 @@ h1 {
 }
 
 .card-1 {
-  border-color: var(--pink);
+  border-color: var(--blue);
 }
 
 .card-2 {
@@ -150,6 +151,18 @@ h1 {
 
 .card-3 {
   border-color: var(--teal);
+}
+
+.card-4 {
+  border-color: var(--orange);
+}
+
+.card-5 {
+  border-color: var(--green);
+}
+
+.card-6 {
+  border-color: var(--navy);
 }
 
 .emoji {
@@ -169,11 +182,105 @@ h1 {
   margin: 0;
 }
 
+.reading {
+  background: #fff;
+  border-radius: 24px;
+  padding: 36px 28px;
+  margin-bottom: 48px;
+  box-shadow: 0 12px 30px rgba(15, 37, 64, 0.1);
+  border: 3px dashed var(--blue);
+}
+
+.reading-title {
+  text-align: center;
+  font-size: 26px;
+  margin: 0 0 6px;
+  color: var(--navy);
+}
+
+.reading-sub {
+  text-align: center;
+  color: var(--muted);
+  margin: 0 0 28px;
+  font-size: 15px;
+}
+
+.reading-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.reading-card {
+  background: var(--bg);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.reading-card h3 {
+  text-align: center;
+  margin: 0 0 12px;
+  font-size: 22px;
+  color: var(--navy);
+}
+
+.yagel-card {
+  border: 3px solid var(--blue);
+}
+
+.amiad-card {
+  border: 3px solid var(--green);
+}
+
+.reading-month {
+  margin-bottom: 16px;
+}
+
+.reading-month h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  background: #fff;
+  border: 2px solid #d7e3f5;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.day:hover {
+  transform: scale(1.06);
+}
+
+.day.checked {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
 .footer {
   text-align: center;
   color: var(--muted);
   font-size: 15px;
-  border-top: 2px dashed rgba(124, 58, 237, 0.25);
+  border-top: 2px dashed rgba(37, 99, 235, 0.3);
   padding-top: 24px;
 }
 
@@ -184,5 +291,14 @@ h1 {
 
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  .reading-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    width: 260px;
+    height: 260px;
   }
 }
