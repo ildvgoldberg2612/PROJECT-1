@@ -1,11 +1,14 @@
-/* A clean, minimal starting point. It's deliberately plain — your prompts will
-   shape how the site actually looks. Edit freely (or just ask the AI to). */
+/* Bold & colorful personal site for Yagel & Amiad Goldberg */
 
 :root {
-  --ink: #1f2937;
-  --muted: #6b7280;
-  --accent: #2563eb;
-  --bg: #ffffff;
+  --ink: #241238;
+  --muted: #5b4b73;
+  --bg: #fff2e0;
+  --pink: #ff5da2;
+  --orange: #ff8a3d;
+  --yellow: #ffd23f;
+  --purple: #7c3aed;
+  --teal: #16c9b0;
 }
 
 * {
@@ -20,38 +23,154 @@ body {
   color: var(--ink);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+.blob-a {
+  width: 420px;
+  height: 420px;
+  background: var(--pink);
+  top: -140px;
+  left: -140px;
+}
+
+.blob-b {
+  width: 360px;
+  height: 360px;
+  background: var(--teal);
+  bottom: -120px;
+  right: -100px;
+}
+
+.blob-c {
+  width: 260px;
+  height: 260px;
+  background: var(--yellow);
+  top: 40%;
+  right: -80px;
 }
 
 .shell {
-  max-width: 640px;
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
   margin: 0 auto;
-  padding: 18vh 24px 24px;
+  padding: 10vh 24px 60px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 56px;
 }
 
 .tag {
+  display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 13px;
-  font-weight: 600;
-  color: var(--accent);
-  margin: 0 0 12px;
-}
-
-h1 {
-  font-size: 44px;
-  line-height: 1.1;
-  margin: 0 0 16px;
-}
-
-.lead {
-  font-size: 18px;
-  color: var(--ink);
+  font-weight: 800;
+  color: #fff;
+  background: var(--purple);
+  padding: 8px 18px;
+  border-radius: 999px;
   margin: 0 0 20px;
 }
 
-.hint {
+h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--pink), var(--orange) 45%, var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.amp {
+  color: var(--teal);
+  -webkit-text-fill-color: var(--teal);
+}
+
+.lead {
+  font-size: 20px;
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(36, 18, 56, 0.12);
+  border: 3px solid transparent;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-1 {
+  border-color: var(--pink);
+}
+
+.card-2 {
+  border-color: var(--yellow);
+}
+
+.card-3 {
+  border-color: var(--teal);
+}
+
+.emoji {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.card p {
   font-size: 15px;
   color: var(--muted);
-  border-top: 1px solid #e5e7eb;
-  padding-top: 16px;
+  margin: 0;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 15px;
+  border-top: 2px dashed rgba(124, 58, 237, 0.25);
+  padding-top: 24px;
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
