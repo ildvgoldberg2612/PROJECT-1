@@ -86,8 +86,9 @@ body {
 
 h1 {
   font-size: 56px;
-  line-height: 1.1;
+  line-height: 1.25;
   margin: 0 0 20px;
+  padding-bottom: 0.08em;
   font-weight: 900;
   background: linear-gradient(90deg, var(--pink), var(--orange) 45%, var(--purple));
   -webkit-background-clip: text;
