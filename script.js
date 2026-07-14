@@ -5,15 +5,20 @@
 const DAYS_IN_MONTH = { july: 31, august: 31 };
 
 const MESSAGES = [
-  "Awesome job, {name}! 🎉",
-  "Way to go, {name}! 📚",
-  "You're on a roll, {name}! 🔥",
-  "Great reading, {name}! 👏",
-  "Keep it up, {name}! 🌟",
-  "Nice work, {name}! 💪",
-  "You're a reading star, {name}! ⭐",
-  "Boom! Another day done, {name}! 🚀",
+  "כל הכבוד, {name}! 🎉",
+  "יאללה קדימה, {name}! 📚",
+  "אתה על הגל, {name}! 🔥",
+  "קריאה מעולה, {name}! 👏",
+  "המשך כך, {name}! 🌟",
+  "עבודה נהדרת, {name}! 💪",
+  "אתה כוכב קריאה, {name}! ⭐",
+  "בום! עוד יום הושלם, {name}! 🚀",
 ];
+
+const NAMES_HE = {
+  yagel: "יגאל",
+  amiad: "עמיעד",
+};
 
 const CONFETTI_COLORS = ["#2563eb", "#f97316", "#16a34a", "#facc15", "#0ea5b7", "#1e3a8a"];
 
@@ -21,8 +26,8 @@ function storageKey(person, month, day) {
   return `reading-${person}-${month}-${day}`;
 }
 
-function capitalize(word) {
-  return word.charAt(0).toUpperCase() + word.slice(1);
+function displayName(person) {
+  return NAMES_HE[person] || person;
 }
 
 document.querySelectorAll(".days").forEach((container) => {
@@ -89,7 +94,7 @@ function burstConfetti(x, y) {
 
 function showToast(person) {
   const template = MESSAGES[Math.floor(Math.random() * MESSAGES.length)];
-  const text = template.replace("{name}", capitalize(person));
+  const text = template.replace("{name}", displayName(person));
 
   const toast = document.createElement("div");
   toast.className = "toast";
