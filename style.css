@@ -108,6 +108,17 @@ h1 {
   margin: 0 auto;
 }
 
+.hero-photo {
+  display: block;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 32px auto 0;
+  border: 6px solid #fff;
+  box-shadow: 0 14px 34px rgba(36, 18, 56, 0.2);
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
